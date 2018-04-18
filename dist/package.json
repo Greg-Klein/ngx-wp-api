@@ -1,0 +1,19 @@
+{
+  "name": "ngx-wp-api",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "url"
+  },
+  "keywords": ["angular", "wordpress", "rest"],
+  "license": "MIT",
+  "main": "./bundles/ngx-wp-api.umd.js",
+  "es2015": "./esm2015/ngx-wp-api.js",
+  "module": "./esm5/ngx-wp-api.es5.js",
+  "typings": "./ngx-wp-api.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^5.0.0",
+    "@angular/common": "^5.0.0",
+    "@angular/http": "^5.0.0"
+  }
+}
