@@ -1,11 +1,11 @@
 {
   "name": "ngx-wp-api",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "url"
   },
-  "keywords": ["angular"],
+  "keywords": ["angular", "wordpress", "rest"],
   "license": "MIT",
   "main": "./bundles/ngx-wp-api.umd.js",
   "es2015": "./esm2015/ngx-wp-api.js",
