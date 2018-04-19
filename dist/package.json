@@ -1,9 +1,13 @@
 {
   "name": "ngx-wp-api",
   "version": "0.0.2",
+  "author": {
+	"name": "Gregory KLEIN",
+	"url": "https://gregoryklein.io"
+  },
   "repository": {
     "type": "git",
-    "url": "url"
+    "url": "https://github.com/Greg-Klein/ngx-wp-api"
   },
   "keywords": ["angular", "wordpress", "rest"],
   "license": "MIT",
