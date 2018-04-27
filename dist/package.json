@@ -1,9 +1,9 @@
 {
   "name": "ngx-wp-api",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": {
-	"name": "Gregory KLEIN",
-	"url": "https://gregoryklein.io"
+    "name": "Gregory KLEIN",
+    "url": "https://gregoryklein.io"
   },
   "repository": {
     "type": "git",

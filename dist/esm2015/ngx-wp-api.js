@@ -101,14 +101,6 @@ class WpEndpointsService {
     constructor(rootUrl, http$$1) {
         this.rootUrl = rootUrl;
         this.http = http$$1;
-        // Generate all the WP endpoints
-        this.postEndpoint = new WpEndpointHelper(`${this.rootUrl}/wp-json/wp/v2/posts`, this.token, this.http);
-        this.commentEndpoint = new WpEndpointHelper(`${this.rootUrl}/wp-json/wp/v2/comments`, this.token, this.http);
-        this.categoryEndpoint = new WpEndpointHelper(`${this.rootUrl}/wp-json/wp/v2/categories`, this.token, this.http);
-        this.tagEndpoint = new WpEndpointHelper(`${this.rootUrl}/wp-json/wp/v2/tags`, this.token, this.http);
-        this.pageEndpoint = new WpEndpointHelper(`${this.rootUrl}/wp-json/wp/v2/pages`, this.token, this.http);
-        this.userEndpoint = new WpEndpointHelper(`${this.rootUrl}/wp-json/wp/v2/users`, this.token, this.http);
-        this.mediaEndpoint = new WpEndpointHelper(`${this.rootUrl}/wp-json/wp/v2/media`, this.token, this.http);
     }
     /**
      * @param {?} token
@@ -121,42 +113,63 @@ class WpEndpointsService {
      * @return {?}
      */
     posts() {
+        if (!this.postEndpoint) {
+            this.postEndpoint = new WpEndpointHelper(`${this.rootUrl}/wp-json/wp/v2/posts`, this.token, this.http);
+        }
         return this.postEndpoint;
     }
     /**
      * @return {?}
      */
     comments() {
+        if (!this.commentEndpoint) {
+            this.commentEndpoint = new WpEndpointHelper(`${this.rootUrl}/wp-json/wp/v2/comments`, this.token, this.http);
+        }
         return this.commentEndpoint;
     }
     /**
      * @return {?}
      */
     categories() {
+        if (!this.categoryEndpoint) {
+            this.categoryEndpoint = new WpEndpointHelper(`${this.rootUrl}/wp-json/wp/v2/categories`, this.token, this.http);
+        }
         return this.categoryEndpoint;
     }
     /**
      * @return {?}
      */
     tags() {
+        if (!this.tagEndpoint) {
+            this.tagEndpoint = new WpEndpointHelper(`${this.rootUrl}/wp-json/wp/v2/tags`, this.token, this.http);
+        }
         return this.tagEndpoint;
     }
     /**
      * @return {?}
      */
     pages() {
+        if (!this.pageEndpoint) {
+            this.pageEndpoint = new WpEndpointHelper(`${this.rootUrl}/wp-json/wp/v2/pages`, this.token, this.http);
+        }
         return this.pageEndpoint;
     }
     /**
      * @return {?}
      */
     users() {
+        if (!this.userEndpoint) {
+            this.userEndpoint = new WpEndpointHelper(`${this.rootUrl}/wp-json/wp/v2/users`, this.token, this.http);
+        }
         return this.userEndpoint;
     }
     /**
      * @return {?}
      */
     medias() {
+        if (!this.mediaEndpoint) {
+            this.mediaEndpoint = new WpEndpointHelper(`${this.rootUrl}/wp-json/wp/v2/media`, this.token, this.http);
+        }
         return this.mediaEndpoint;
     }
 }
