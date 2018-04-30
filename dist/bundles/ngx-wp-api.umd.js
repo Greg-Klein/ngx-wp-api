@@ -85,9 +85,11 @@ var WpEndpointHelper = /** @class */ (function () {
      * @return {?}
      */
     WpEndpointHelper.prototype.getOptions = function (options) {
+        var /** @type {?} */ headers = options.headers || {};
         if (this.token) {
-            options.headers = new http.HttpHeaders().set('Authorization', "Basic " + this.token);
+            headers = Object.assign({}, headers, { Authorization: "Basic " + this.token });
         }
+        options.headers = new http.HttpHeaders(headers);
         options.observe = 'response';
         return options;
     };

@@ -78,9 +78,11 @@ class WpEndpointHelper {
      * @return {?}
      */
     getOptions(options) {
+        let /** @type {?} */ headers = options.headers || {};
         if (this.token) {
-            options.headers = new HttpHeaders().set('Authorization', `Basic ${this.token}`);
+            headers = Object.assign({}, headers, { Authorization: `Basic ${this.token}` });
         }
+        options.headers = new HttpHeaders(headers);
         options.observe = 'response';
         return options;
     }

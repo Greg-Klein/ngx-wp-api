@@ -74,9 +74,13 @@ export class WpEndpointHelper {
    * @param options Request options
    */
   getOptions(options: any): any {
+    let headers = options.headers || {};
+
     if (this.token) {
-      options.headers = new HttpHeaders().set('Authorization', `Basic ${this.token}`);
+      headers = { ...headers, Authorization: `Basic ${this.token}` };
     }
+
+    options.headers = new HttpHeaders(headers);
     options.observe = 'response';
     return options;
   }
