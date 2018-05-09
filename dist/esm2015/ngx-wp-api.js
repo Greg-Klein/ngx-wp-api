@@ -40,7 +40,7 @@ class WpEndpointHelper {
      * @param {?=} options Request options
      * @return {?}
      */
-    getItem(id, options = this.options) {
+    getItem(id, options = {}) {
         return this._http.get(`${this.url}/${id}`, this.getOptions(options));
     }
     /**

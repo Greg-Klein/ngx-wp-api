@@ -41,7 +41,7 @@ var WpEndpointHelper = /** @class */ (function () {
      * @return {?}
      */
     WpEndpointHelper.prototype.getItem = function (id, options) {
-        if (options === void 0) { options = this.options; }
+        if (options === void 0) { options = {}; }
         return this._http.get(this.url + "/" + id, this.getOptions(options));
     };
     /**

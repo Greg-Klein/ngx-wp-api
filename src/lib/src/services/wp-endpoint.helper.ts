@@ -4,7 +4,6 @@
 
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import { Inject } from '@angular/core';
 
 export class WpEndpointHelper {
   url: string;
@@ -34,7 +33,7 @@ export class WpEndpointHelper {
    * @param id Element id
    * @param options Request options
    */
-  getItem(id: number, options: any = this.options): Observable<any> {
+  getItem(id: number, options: any = {}): Observable<any> {
     return this._http.get(`${this.url}/${id}`, this.getOptions(options));
   }
 
