@@ -54,7 +54,7 @@ var WpEndpointHelper = /** @class */ (function () {
      * @return {?}
      */
     WpEndpointHelper.prototype.post = function (body, options) {
-        if (options === void 0) { options = this.options; }
+        if (options === void 0) { options = {}; }
         return this._http.post(this.url, body, this.getOptions(options));
     };
     /**
@@ -65,7 +65,7 @@ var WpEndpointHelper = /** @class */ (function () {
      * @return {?}
      */
     WpEndpointHelper.prototype.put = function (id, body, options) {
-        if (options === void 0) { options = this.options; }
+        if (options === void 0) { options = {}; }
         return this._http.put(this.url + "/" + id, body, this.getOptions(options));
     };
     /**
@@ -75,7 +75,7 @@ var WpEndpointHelper = /** @class */ (function () {
      * @return {?}
      */
     WpEndpointHelper.prototype.delete = function (id, options) {
-        if (options === void 0) { options = this.options; }
+        if (options === void 0) { options = {}; }
         options.responseType = 'text';
         return this._http.delete(this.url + "/" + id + "?force=true", this.getOptions(options));
     };

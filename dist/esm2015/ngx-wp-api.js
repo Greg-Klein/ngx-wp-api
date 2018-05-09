@@ -49,7 +49,7 @@ class WpEndpointHelper {
      * @param {?=} options Request options
      * @return {?}
      */
-    post(body, options = this.options) {
+    post(body, options = {}) {
         return this._http.post(this.url, body, this.getOptions(options));
     }
     /**
@@ -59,7 +59,7 @@ class WpEndpointHelper {
      * @param {?=} options Request options
      * @return {?}
      */
-    put(id, body, options = this.options) {
+    put(id, body, options = {}) {
         return this._http.put(`${this.url}/${id}`, body, this.getOptions(options));
     }
     /**
@@ -68,7 +68,7 @@ class WpEndpointHelper {
      * @param {?=} options Request options
      * @return {?}
      */
-    delete(id, options = this.options) {
+    delete(id, options = {}) {
         options.responseType = 'text';
         return this._http.delete(`${this.url}/${id}?force=true`, this.getOptions(options));
     }

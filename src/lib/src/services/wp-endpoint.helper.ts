@@ -42,7 +42,7 @@ export class WpEndpointHelper {
    * @param body Request body
    * @param options Request options
    */
-  post(body: any, options: any = this.options): Observable<any> {
+  post(body: any, options: any = {}): Observable<any> {
     return this._http.post(this.url, body, this.getOptions(options));
   }
 
@@ -52,7 +52,7 @@ export class WpEndpointHelper {
    * @param body Request body
    * @param options Request options
    */
-  put(id: number, body: any, options: any = this.options): Observable<any> {
+  put(id: number, body: any, options: any = {}): Observable<any> {
     return this._http.put(`${this.url}/${id}`, body, this.getOptions(options));
   }
 
@@ -61,7 +61,7 @@ export class WpEndpointHelper {
    * @param id Element id
    * @param options Request options
    */
-  delete(id: number, options: any = this.options): Observable<any> {
+  delete(id: number, options: any = {}): Observable<any> {
     options.responseType = 'text';
     return this._http.delete(`${this.url}/${id}?force=true`, this.getOptions(options));
   }
